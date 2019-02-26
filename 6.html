@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	
+	#divs{margin-left:200px;margin-top:50px;}
+		ul{width: 480px;height:300px;margin-top:20px;margin-left:200px}
+		li{width:60px;height:60px;float:left;list-style:none;margin-left:30px;border:solid 2px #fff;}
+	</style>
+</head>
+<body>
+<div id="divs"><img src="../img/p1_large.jpg"></div>
+<ul class="us">
+	<li><img src="../img/p1_small.jpg" alt="../img/p1_large.jpg"></li>
+	<li><img src="../img/p2_small.jpg" alt="../img/p2_l.jpg"></li>
+	<li><img src="../img/p3_small.jpg" alt="../img/p3_l.jpg"></li>
+	<li><img src="../img/p4_small.jpg" alt="../img/p4_l.jpg"></li>
+</ul>
+<script type="text/javascript">
+
+	 var us=document.getElementsByClassName('us')//.getElementsByTagName('li');
+
+     var lis=us[0].getElementsByTagName('li');
+
+     var divs=document.getElementById('divs');
+
+        var qwe=divs.getElementsByTagName('img')
+        console.log(qwe)
+	 // console.log(qwe)
+	 for(var i=0;i<lis.length;i++){
+	 	  lis[i].onmouseover=function(){
+	 	  	this.style.borderColor='#666'
+            qwe[0].src=this.children[0].alt;
+	 	  }
+	 	  lis[i].onmouseout=function(){
+	 	  	this.style.borderColor='#fff'
+	 	  }
+	 }
+	
+</script>
+</body>
+</html>
